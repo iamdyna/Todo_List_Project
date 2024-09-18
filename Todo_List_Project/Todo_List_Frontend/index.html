@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Todo List</h1>
+
+    <!-- Form to create a new todo -->
+    <form id="todo-form">
+      <input
+        type="text"
+        id="todo-input"
+        placeholder="Enter new todo"
+        required
+      />
+      <label for="is-completed">Is Completed:</label>
+      <input type="checkbox" id="is-completed" />
+      <button type="submit">Add Todo</button>
+    </form>
+
+    <!-- Form to update a todo -->
+    <form id="update-form" style="display: none">
+      <input
+        type="text"
+        id="update-todo-input"
+        placeholder="Update todo"
+        required
+      />
+      <label for="update-is-completed">Is Completed:</label>
+      <input type="checkbox" id="update-is-completed" />
+      <input type="hidden" id="update-todo-id" />
+      <button type="submit">Update Todo</button>
+    </form>
+
+    <div id="todo-list"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
